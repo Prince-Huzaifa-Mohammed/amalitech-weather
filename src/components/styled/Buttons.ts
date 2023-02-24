@@ -5,6 +5,7 @@ interface Props {
   //   color?: string;
   padding?: string;
   margin?: string;
+  width?: string;
 }
 
 export const Button = styled.button<Props>`
@@ -13,11 +14,16 @@ export const Button = styled.button<Props>`
   border-radius: ${({ theme }) => theme.borderRadius.round};
   margin-top: ${({ margin }) => margin || "1rem"};
   margin-bottom: ${({ margin }) => margin || "1rem"};
+  width: ${({ width }) => width};
 
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 1.2rem;
+
+  @media (max-width: 500px) {
+    width: 100%;
+  }
 `;
 
 export const PrimaryButton = styled(Button)<Props>`
