@@ -11,7 +11,8 @@ function App() {
       <GlobalStyles />
       <Router>
         <Routes>
-          <Route path="/" element={<Register />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/register" element={<Register />} />
         </Routes>
       </Router>
     </ThemeProvider>
