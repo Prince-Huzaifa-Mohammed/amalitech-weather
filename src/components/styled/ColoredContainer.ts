@@ -12,6 +12,7 @@ interface ContainerProps {
 export const ColoredContainer = styled.div<Props>`
   height: ${({ height }) => height};
   background-color: ${({ backgroundColor }) => backgroundColor};
+  padding: 2rem;
 `;
 
 export const Container = styled.div<ContainerProps>`

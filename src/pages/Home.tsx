@@ -1,3 +1,4 @@
+import Logo from "../components/Logo";
 import {
   ColoredContainer,
   PositionedBox,
@@ -7,7 +8,7 @@ const Home = () => {
   return (
     <>
       <ColoredContainer height="50vh" backgroundColor="#DD5928">
-        Ghana
+        <Logo />
       </ColoredContainer>
 
       <ColoredContainer height="50vh" backgroundColor="#0198BA">
