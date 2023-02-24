@@ -3,6 +3,12 @@ import {
   ColoredContainer,
   PositionedBox,
 } from "../components/styled/ColoredContainer";
+import {
+  PrimaryHeading,
+  SecondaryHeading,
+  TertiaryHeading,
+  Text,
+} from "../components/styled/Headings";
 
 const Home = () => {
   return (
@@ -15,7 +21,12 @@ const Home = () => {
         Ghana
       </ColoredContainer>
 
-      <PositionedBox>Senegal</PositionedBox>
+      <PositionedBox>
+        <PrimaryHeading textAlign="center">Home Page</PrimaryHeading>
+        <SecondaryHeading>Home Page</SecondaryHeading>
+        <TertiaryHeading>Home Page</TertiaryHeading>
+        <Text>My name is Ghana</Text>
+      </PositionedBox>
     </>
   );
 };
