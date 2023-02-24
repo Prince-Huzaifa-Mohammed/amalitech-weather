@@ -108,6 +108,7 @@ const GlobalStyles = createGlobalStyle<ThemeProps>`
 
     @media (max-width: ${({ theme }) => theme.breakPoints.mobile}) {
       letter-spacing: 1.5px;
+      /* font-size: 1.4rem; */
     }
   }
 

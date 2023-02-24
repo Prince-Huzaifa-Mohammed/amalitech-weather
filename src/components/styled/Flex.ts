@@ -11,6 +11,7 @@ interface Props {
 
 export const Flex = styled.div<Props>`
   display: flex;
+  flex-wrap: wrap;
   flex-direction: ${({ direction }) => direction || "row"};
   justify-content: ${({ justifyContent }) => justifyContent || "center"};
   align-items: ${({ alignItems }) => alignItems || "center"};

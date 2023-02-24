@@ -1,24 +1,13 @@
 import { Link } from "react-router-dom";
 import Logo from "../components/Logo";
-import {
-  OutlinedPrimaryButton,
-  OutlinedSecondaryButton,
-  PrimaryButton,
-  SecondaryButton,
-} from "../components/styled/Buttons";
+import { PrimaryButton } from "../components/styled/Buttons";
 import {
   ColoredContainer,
   PositionedBox,
 } from "../components/styled/ColoredContainer";
 import { Flex } from "../components/styled/Flex";
 import { GridCenter } from "../components/styled/GridCenter";
-import {
-  PrimaryHeading,
-  SecondaryHeading,
-  TertiaryHeading,
-  Text,
-} from "../components/styled/Headings";
-import { SVGIcon } from "../components/styled/SVGIcon";
+import { PrimaryHeading, Text } from "../components/styled/Headings";
 import { Thumbnail } from "../components/styled/Thumbnail";
 
 const Home = () => {
@@ -48,8 +37,6 @@ const Home = () => {
           <Text>Already have an account?</Text>
           <Link to="/">Log in</Link>
         </Flex>
-
-        {/* <SVGIcon src="./assets/google.svg" width="2rem" /> */}
       </PositionedBox>
     </>
   );
