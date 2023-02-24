@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import Logo from "../components/Logo";
+import { ErrorAlert } from "../components/styled/Alert";
 import { PrimaryButton } from "../components/styled/Buttons";
 import {
   ColoredContainer,
