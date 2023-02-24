@@ -59,7 +59,7 @@ const Register = () => {
 
           <label>Email</label>
           <InputGroup>
-            <input type="text" placeholder="abukayoyo88@gmail.com" />
+            <input type="email" placeholder="abukayoyo88@gmail.com" />
           </InputGroup>
 
           <label>Password</label>
