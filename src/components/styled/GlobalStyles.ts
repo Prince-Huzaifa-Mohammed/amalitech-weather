@@ -73,6 +73,11 @@ const GlobalStyles = createGlobalStyle<ThemeProps>`
   a {
     color: inherit;
     font-family: inherit;
+    transition: all 0.3s ease;
+
+    &:active {
+      transform: scale(0.98);
+    }
   }
 
   /* input {
