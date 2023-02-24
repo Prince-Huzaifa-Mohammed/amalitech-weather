@@ -15,7 +15,7 @@ export const Flex = styled.div<Props>`
   flex-direction: ${({ direction }) => direction || "row"};
   justify-content: ${({ justifyContent }) => justifyContent || "center"};
   align-items: ${({ alignItems }) => alignItems || "center"};
-  padding: ${({ padding }) => padding || "1rem"};
+  /* padding: ${({ padding }) => padding || "1rem"}; */
 
   margin-top: ${({ margin }) => margin || "1rem"};
   margin-bottom: ${({ margin }) => margin || "rem"};

@@ -41,4 +41,15 @@ export const PositionedBox = styled.div<ContainerProps>`
   @media (max-width: 1110px) {
     width: 90%;
   }
+
+  form {
+    width: 700px;
+    max-width: 100%;
+    margin: 0 auto;
+    /* border: 1px solid black; */
+
+    div {
+      flex: 1;
+    }
+  }
 `;

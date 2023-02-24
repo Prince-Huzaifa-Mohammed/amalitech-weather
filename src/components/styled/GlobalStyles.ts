@@ -50,7 +50,7 @@ const GlobalStyles = createGlobalStyle<ThemeProps>`
   }
 
   h3 {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     font-weight: 400;
 
     @media (max-width: ${({ theme }) => theme.breakPoints.mobile}) {
@@ -80,10 +80,18 @@ const GlobalStyles = createGlobalStyle<ThemeProps>`
     }
   }
 
-  /* input {
-    display: flex;
-    align-items: center;
-  } */
+  input {
+    border: none;
+    outline: none;
+    /* padding: 1rem 2rem; */
+    font-size: inherit;
+    font-family: inherit;
+    width: 100%;
+    
+    ::placeholder {
+      color: ${({ theme }) => theme.colors.lightText};
+    }
+  }
 
   button {
     border: none;
@@ -121,6 +129,7 @@ const GlobalStyles = createGlobalStyle<ThemeProps>`
     font-size: inherit;
     color: inherit;
     display: block;
+    /* padding: 1rem 2rem; */
   }
 
 `;
