@@ -10,6 +10,7 @@ import {
   ColoredContainer,
   PositionedBox,
 } from "../components/styled/ColoredContainer";
+import { Flex } from "../components/styled/Flex";
 import { GridCenter } from "../components/styled/GridCenter";
 import {
   PrimaryHeading,
@@ -39,12 +40,14 @@ const Home = () => {
         <PrimaryHeading textAlign="center">
           Welcome to Amalitech Weathercast
         </PrimaryHeading>
-        <PrimaryButton>
-          {/* <SVGIcon src="./assets/google.svg" width="2rem" />  */}
-          Create an account
-        </PrimaryButton>
-        <Text>Already have an account?</Text>
-        <Link to="/">Log in</Link>
+        <Flex>
+          <PrimaryButton>
+            {/* <SVGIcon src="./assets/google.svg" width="2rem" />  */}
+            Create an account
+          </PrimaryButton>
+          <Text>Already have an account?</Text>
+          <Link to="/">Log in</Link>
+        </Flex>
 
         {/* <SVGIcon src="./assets/google.svg" width="2rem" /> */}
       </PositionedBox>
