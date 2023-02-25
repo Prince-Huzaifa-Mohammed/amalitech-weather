@@ -1,6 +1,5 @@
 import { FaAngleDown, FaSearch } from "react-icons/fa";
 import { PrimaryButton } from "./styled/Buttons";
-import { Container } from "./styled/ColoredContainer";
 import { Nav } from "./styled/Nav";
 import { StyledCelcius } from "./styled/StyledCelcius";
 import { StyledHeader } from "./styled/StyledHeader";
