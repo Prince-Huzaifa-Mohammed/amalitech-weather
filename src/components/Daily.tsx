@@ -1,10 +1,10 @@
 import { Projected } from "./styled/Projected";
 
-const Hourly = () => {
+const Daily = () => {
   return (
     <Projected>
       <div>
-        <h2>Hourly Forecast</h2>
+        <h2>Daily Forecast</h2>
         <div>
           <div>
             <span>10:24</span>
@@ -20,4 +20,4 @@ const Hourly = () => {
   );
 };
 
-export default Hourly;
+export default Daily;
