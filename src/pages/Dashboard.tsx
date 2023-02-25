@@ -9,7 +9,6 @@ import Logo from "../components/Logo";
 import { Box } from "../components/styled/Box";
 import { Container } from "../components/styled/ColoredContainer";
 import { ShowDropDown } from "../components/styled/ShowDropDown";
-import { StyledHero } from "../components/styled/StyledHero";
 
 const Dashboard = () => {
   const [showDropDown, setShowDropDown] = useState(false);
