@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Logo from "../components/Logo";
 import { PrimaryButton } from "../components/styled/Buttons";
 import {
@@ -11,6 +11,7 @@ import { PrimaryHeading, Text } from "../components/styled/Headings";
 import { Thumbnail } from "../components/styled/Thumbnail";
 
 const Home = () => {
+  const navigate = useNavigate();
   return (
     <>
       <ColoredContainer height="50vh" backgroundColor="#DD5928">
@@ -30,12 +31,12 @@ const Home = () => {
           Welcome to Amalitech Weathercast
         </PrimaryHeading>
         <Flex>
-          <PrimaryButton>
+          <PrimaryButton onClick={() => navigate("/register")}>
             {/* <SVGIcon src="./assets/google.svg" width="2rem" />  */}
             Create an account
           </PrimaryButton>
           <Text>Already have an account?</Text>
-          <Link to="/">Log in</Link>
+          <Link to="/login">Log in</Link>
         </Flex>
       </PositionedBox>
     </>

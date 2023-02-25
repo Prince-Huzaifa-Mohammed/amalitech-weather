@@ -1,5 +1,5 @@
 import { FaEye } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Divider from "../components/Divider";
 import Logo from "../components/Logo";
 import {
@@ -20,6 +20,7 @@ import { InputGroup } from "../components/styled/Input";
 import { SVGIcon } from "../components/styled/SVGIcon";
 
 const Login = () => {
+  const navigate = useNavigate();
   return (
     <>
       <ColoredContainer height="50vh" backgroundColor="#DD5928">
@@ -53,7 +54,12 @@ const Login = () => {
 
           <Flex>
             <PrimaryButton width="40%">Log in</PrimaryButton>
-            <OutlinedPrimaryButton width="40%">Register</OutlinedPrimaryButton>
+            <OutlinedPrimaryButton
+              width="40%"
+              onClick={() => navigate("/register")}
+            >
+              Register
+            </OutlinedPrimaryButton>
           </Flex>
 
           <Divider />
@@ -63,7 +69,7 @@ const Login = () => {
             <SVGIcon src="./assets/google.svg" width="2rem" />
             Sign in with Google
           </OutlinedPrimaryButton>
-          <Link to="/">Forgot Password?</Link>
+          <Link to="/reset-password">Forgot Password?</Link>
         </Flex>
       </PositionedBox>
     </>
