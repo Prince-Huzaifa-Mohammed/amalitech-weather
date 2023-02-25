@@ -15,8 +15,18 @@ import { FaEye } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { PrimaryButton } from "../components/styled/Buttons";
 import { GridCenter } from "../components/styled/GridCenter";
+import { useState } from "react";
 
 const Register = () => {
+  const [visible, setVisible] = useState(false);
+  const [country, setCountry] = useState("Ghana");
+
+  // Function to toggle password field visibility
+  const toggleVisibility = () => {
+    if (visible) setVisible(false);
+    else setVisible(true);
+  };
+
   return (
     <>
       <ColoredContainer height="50vh" backgroundColor="#DD5928">
@@ -64,8 +74,13 @@ const Register = () => {
 
           <label>Password</label>
           <InputGroup>
-            <input type="password" placeholder="************" />
-            <FaEye color="" />
+            <input
+              type={visible ? "text" : "password"}
+              placeholder="************"
+            />
+            <div>
+              <FaEye color="" onClick={toggleVisibility} />
+            </div>
           </InputGroup>
 
           <Text textAlign="center">

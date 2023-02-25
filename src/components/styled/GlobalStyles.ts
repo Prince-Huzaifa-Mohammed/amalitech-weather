@@ -87,6 +87,7 @@ const GlobalStyles = createGlobalStyle<ThemeProps>`
     font-size: inherit;
     font-family: inherit;
     width: 100%;
+    background-color: transparent;
     
     ::placeholder {
       color: ${({ theme }) => theme.colors.lightText};

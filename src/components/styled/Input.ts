@@ -12,6 +12,10 @@ export const InputGroup = styled.div<Props>`
   width: 100%;
   margin-bottom: ${({ margin }) => margin};
 
+  div {
+    cursor: pointer;
+  }
+
   display: flex;
   gap: 1.5rem;
   align-items: center;

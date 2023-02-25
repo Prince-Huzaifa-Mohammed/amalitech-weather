@@ -20,6 +20,7 @@ export const StyledHeader = styled.header`
 
   div:nth-of-type(2) {
     width: 50%;
+    /* background-color: white; */
 
     @media (max-width: ${({ theme }) => theme.breakPoints.mobile}) {
       order: 1;

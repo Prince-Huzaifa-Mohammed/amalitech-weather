@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { FaEye } from "react-icons/fa";
 import { Link, useNavigate } from "react-router-dom";
 import Divider from "../components/Divider";
@@ -11,7 +12,7 @@ import {
   PositionedBox,
 } from "../components/styled/ColoredContainer";
 import { Flex } from "../components/styled/Flex";
-import { GridCenter } from "../components/styled/GridCenter";
+// import { GridCenter } from "../components/styled/GridCenter";
 import {
   PrimaryHeading,
   SecondaryHeading,
@@ -20,7 +21,16 @@ import { InputGroup } from "../components/styled/Input";
 import { SVGIcon } from "../components/styled/SVGIcon";
 
 const Login = () => {
+  const [visible, setVisible] = useState(false);
+
   const navigate = useNavigate();
+
+  // Function to toggle password visibility
+  const toggleVisibility = () => {
+    if (visible) setVisible(false);
+    else setVisible(true);
+  };
+
   return (
     <>
       <ColoredContainer height="50vh" backgroundColor="#DD5928">
@@ -48,8 +58,13 @@ const Login = () => {
 
           <label>Password</label>
           <InputGroup>
-            <input type="password" placeholder="************" />
-            <FaEye color="" />
+            <input
+              type={visible ? "text" : "password"}
+              placeholder="************"
+            />
+            <div>
+              <FaEye color="" onClick={toggleVisibility} />
+            </div>
           </InputGroup>
 
           <Flex>

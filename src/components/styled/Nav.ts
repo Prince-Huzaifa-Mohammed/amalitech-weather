@@ -6,6 +6,7 @@ export const Nav = styled.div`
   height: 8rem;
   padding: 1rem 5rem;
   box-shadow: ${({ theme }) => theme.boxShadows.boxShadowMedium};
+  background-color: ${({ theme }) => theme.colors.smokeWhite};
 
   @media (max-width: ${({ theme }) => theme.breakPoints.mobile}) {
     padding: 0.6rem 2rem;

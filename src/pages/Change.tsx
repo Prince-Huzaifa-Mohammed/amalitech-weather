@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { FaEye } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import Logo from "../components/Logo";
@@ -11,6 +12,19 @@ import { PrimaryHeading, TertiaryHeading } from "../components/styled/Headings";
 import { InputGroup } from "../components/styled/Input";
 
 const Change = () => {
+  const [visibleNew, setVisibleNew] = useState(false);
+  const [visibleConfirm, setVisibleConfirm] = useState(false);
+
+  const toggleVisibility = () => {
+    if (visibleNew) setVisibleNew(false);
+    else setVisibleNew(true);
+  };
+
+  const toggleVisibilityConfirm = () => {
+    if (visibleConfirm) setVisibleConfirm(false);
+    else setVisibleConfirm(true);
+  };
+
   return (
     <>
       <ColoredContainer height="50vh" backgroundColor="#DD5928">
@@ -33,14 +47,24 @@ const Change = () => {
         <form>
           <label>New Password</label>
           <InputGroup>
-            <input type="password" placeholder="************" />
-            <FaEye color="" />
+            <input
+              type={visibleNew ? "text" : "password"}
+              placeholder="************"
+            />
+            <div>
+              <FaEye color="" onClick={toggleVisibility} />
+            </div>
           </InputGroup>
 
           <label>Confirm Password</label>
           <InputGroup>
-            <input type="password" placeholder="************" />
-            <FaEye color="" />
+            <input
+              type={visibleConfirm ? "text" : "password"}
+              placeholder="************"
+            />
+            <div>
+              <FaEye color="" onClick={toggleVisibilityConfirm} />
+            </div>
           </InputGroup>
 
           <GridCenter>
@@ -49,7 +73,7 @@ const Change = () => {
         </form>
 
         <GridCenter>
-          <Link to="/">Back to Login</Link>
+          <Link to="/login">Back to Login</Link>
         </GridCenter>
       </PositionedBox>
     </>
