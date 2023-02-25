@@ -1,3 +1,4 @@
+import { Dispatch, SetStateAction } from "react";
 import { FaAngleDown, FaSearch } from "react-icons/fa";
 import { PrimaryButton } from "./styled/Buttons";
 import { Nav } from "./styled/Nav";
@@ -9,12 +10,18 @@ interface Props {
   toggleDropDown: () => void;
   isCelcius: boolean;
   toggleCelcius: () => void;
+  getGeoWeather: (e: React.FormEvent<HTMLFormElement>) => void;
+  inputData: string;
+  setInputData: Dispatch<SetStateAction<string>>;
 }
 
 const Header: React.FC<Props> = ({
   toggleDropDown,
   isCelcius,
   toggleCelcius,
+  getGeoWeather,
+  inputData,
+  setInputData,
 }) => {
   return (
     <Nav>
@@ -41,11 +48,13 @@ const Header: React.FC<Props> = ({
         </div>
 
         <div>
-          <form>
+          <form onSubmit={getGeoWeather}>
             <div>
               <input
                 type="text"
                 placeholder="Example Germany or Kigali, Rwanda"
+                value={inputData}
+                onChange={(e) => setInputData(e.target.value)}
               />
               <PrimaryButton>
                 <span>
