@@ -6,6 +6,7 @@ export const StyledLoader = styled.div`
   left: 0;
   width: 100vw;
   height: 100vh;
+  z-index: 10;
 
   background-color: rgba(0, 0, 0, 0.75);
 

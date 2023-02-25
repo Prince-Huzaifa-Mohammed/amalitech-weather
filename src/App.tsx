@@ -11,6 +11,9 @@ import Register from "./pages/Register";
 import Reset from "./pages/Reset";
 import theme from "./theme/theme";
 
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 function App() {
   return (
     <ThemeProvider theme={theme}>
@@ -27,6 +30,7 @@ function App() {
           <Route path="/dashboard" element={<Dashboard />} />
         </Routes>
       </Router>
+      <ToastContainer />
     </ThemeProvider>
   );
 }

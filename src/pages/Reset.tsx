@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Logo from "../components/Logo";
 import { PrimaryButton } from "../components/styled/Buttons";
 import {
@@ -14,6 +14,8 @@ import {
 import { Thumbnail } from "../components/styled/Thumbnail";
 
 const Reset = () => {
+  const navigate = useNavigate();
+
   return (
     <>
       <ColoredContainer height="50vh" backgroundColor="#DD5928">
@@ -43,11 +45,16 @@ const Reset = () => {
         </Text>
 
         <GridCenter>
-          <PrimaryButton width="50%">Reset your Password</PrimaryButton>
+          <PrimaryButton
+            width="50%"
+            onClick={() => navigate("/forgot-password")}
+          >
+            Reset your Password
+          </PrimaryButton>
         </GridCenter>
 
         <GridCenter>
-          <Link to="/">Back to Login</Link>
+          <Link to="/login">Back to Login</Link>
         </GridCenter>
       </PositionedBox>
     </>
