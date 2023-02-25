@@ -270,7 +270,11 @@ const Register = () => {
             </form>
             <Text textAlign="center">You can also signup with Google</Text>
             <Flex>
-              <SVGIcon src="./assets/google.svg" width="3rem" />
+              <SVGIcon
+                src="./assets/google.svg"
+                width="3rem"
+                onClick={() => navigate("/country")}
+              />
               <Link to="/">Back to login</Link>
             </Flex>
           </PositionedBox>
