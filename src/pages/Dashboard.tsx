@@ -8,19 +8,30 @@ import Loader from "../components/Loader";
 import Logo from "../components/Logo";
 import { Box } from "../components/styled/Box";
 import { Container } from "../components/styled/ColoredContainer";
+import { ShowDropDown } from "../components/styled/ShowDropDown";
 import { StyledHero } from "../components/styled/StyledHero";
 
 const Dashboard = () => {
   const [showDropDown, setShowDropDown] = useState(false);
+
+  // Function to open and close dropdown
+  const toggleDropDown = () => {
+    setShowDropDown(!showDropDown);
+  };
+
   return (
     <Box>
       <Logo />
 
-      <Header />
+      <Header toggleDropDown={toggleDropDown} />
 
-      <aside>
-        <DropDown />
-      </aside>
+      {showDropDown && (
+        <ShowDropDown>
+          <aside>
+            <DropDown />
+          </aside>
+        </ShowDropDown>
+      )}
 
       <Container width="1200px">
         <Hero />

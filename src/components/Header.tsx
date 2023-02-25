@@ -6,7 +6,11 @@ import { StyledCelcius } from "./styled/StyledCelcius";
 import { StyledHeader } from "./styled/StyledHeader";
 import { SVGIcon } from "./styled/SVGIcon";
 
-const Header = () => {
+interface Props {
+  toggleDropDown: () => void;
+}
+
+const Header: React.FC<Props> = ({ toggleDropDown }) => {
   return (
     <Nav>
       <StyledHeader>
@@ -44,7 +48,7 @@ const Header = () => {
             <SVGIcon src="./assets/Germany.svg" width="5rem" />
             <h2>K</h2>
             <span>
-              <FaAngleDown />
+              <FaAngleDown onClick={toggleDropDown} />
             </span>
           </div>
         </div>
