@@ -2,5 +2,14 @@ import styled from "styled-components";
 
 export const Box = styled.div`
   padding-top: 2rem;
-  /* background-color: ${({ theme }) => theme.colors.smokeWhite}; */
+
+  nav {
+    position: relative;
+  }
+
+  aside {
+    position: absolute;
+    right: 3rem;
+    z-index: 5;
+  }
 `;

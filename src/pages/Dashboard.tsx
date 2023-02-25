@@ -1,3 +1,4 @@
+import DropDown from "../components/DropDown";
 import Header from "../components/Header";
 import Logo from "../components/Logo";
 import { Box } from "../components/styled/Box";
@@ -8,6 +9,10 @@ const Dashboard = () => {
       <Logo />
 
       <Header />
+
+      <aside>
+        <DropDown />
+      </aside>
     </Box>
   );
 };
