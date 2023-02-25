@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 interface Props {
-  height: string;
+  height?: string;
   backgroundColor: string;
 }
 

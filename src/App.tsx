@@ -1,7 +1,10 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
 import GlobalStyles from "./components/styled/GlobalStyles";
+import Change from "./pages/Change";
 import Country from "./pages/Country";
+import Dashboard from "./pages/Dashboard";
+import Forgot from "./pages/Forgot";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
@@ -19,6 +22,9 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/country" element={<Country />} />
           <Route path="/reset-password" element={<Reset />} />
+          <Route path="/forgot-password" element={<Forgot />} />
+          <Route path="/change-password" element={<Change />} />
+          <Route path="/dashboard" element={<Dashboard />} />
         </Routes>
       </Router>
     </ThemeProvider>
