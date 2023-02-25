@@ -8,21 +8,36 @@ import { SVGIcon } from "./styled/SVGIcon";
 
 interface Props {
   toggleDropDown: () => void;
+  isCelcius: boolean;
+  toggleCelcius: () => void;
 }
 
-const Header: React.FC<Props> = ({ toggleDropDown }) => {
+const Header: React.FC<Props> = ({
+  toggleDropDown,
+  isCelcius,
+  toggleCelcius,
+}) => {
   return (
     <Nav>
       <StyledHeader>
         <div>
           <div>
-            {/* <StyledCelcius> */}
-            <span>&deg; C</span>
-            {/* </StyledCelcius> */}
+            {isCelcius ? (
+              <>
+                <StyledCelcius>
+                  <span>&deg; C</span>
+                </StyledCelcius>
 
-            <StyledCelcius>
-              <span>&deg; F</span>
-            </StyledCelcius>
+                <span onClick={toggleCelcius}>&deg; F</span>
+              </>
+            ) : (
+              <>
+                <span onClick={toggleCelcius}>&deg; C</span>
+                <StyledCelcius>
+                  <span>&deg; F</span>
+                </StyledCelcius>
+              </>
+            )}
           </div>
         </div>
 

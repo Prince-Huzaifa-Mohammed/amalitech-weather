@@ -13,17 +13,27 @@ import { StyledHero } from "../components/styled/StyledHero";
 
 const Dashboard = () => {
   const [showDropDown, setShowDropDown] = useState(false);
+  const [isCelcius, setIsCelcius] = useState(true);
 
   // Function to open and close dropdown
   const toggleDropDown = () => {
     setShowDropDown(!showDropDown);
   };
 
+  // Function to switch from celcius to fahrenheit and vise versa
+  const toggleCelcuis = () => {
+    setIsCelcius(!isCelcius);
+  };
+
   return (
     <Box>
       <Logo />
 
-      <Header toggleDropDown={toggleDropDown} />
+      <Header
+        toggleDropDown={toggleDropDown}
+        isCelcius={isCelcius}
+        toggleCelcius={toggleCelcuis}
+      />
 
       {showDropDown && (
         <ShowDropDown>
