@@ -80,6 +80,25 @@ const GlobalStyles = createGlobalStyle<ThemeProps>`
     }
   }
 
+  span {
+    a {
+      padding: 1.4rem 3rem;
+      border: ${({ theme }) => theme.borders.primary};
+      border-radius: ${({ theme }) => theme.borderRadius.round};
+      text-transform: uppercase;
+      text-decoration: none;
+      /* width: 60%; */
+      display: inline-block;
+
+      @media (max-width: ${({ theme }) => theme.breakPoints.mobile}) {
+         width: 100%;
+         display: block;
+         /* padding: 1.4rem 10rem; */
+      /* font-size: 1.4rem; */
+      }
+    }
+  }
+
   input {
     border: none;
     outline: none;

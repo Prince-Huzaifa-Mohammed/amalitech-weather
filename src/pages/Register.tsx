@@ -275,7 +275,7 @@ const Register = () => {
                 width="3rem"
                 onClick={() => navigate("/country")}
               />
-              <Link to="/">Back to login</Link>
+              <Link to="/login">Back to login</Link>
             </Flex>
           </PositionedBox>
         </>

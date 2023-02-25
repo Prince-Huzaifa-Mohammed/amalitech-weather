@@ -45,3 +45,5 @@ export const OutlinedSecondaryButton = styled(Button)<Props>`
   border: ${({ theme }) => theme.borders.secondary};
   color: ${({ theme }) => theme.colors.secondary};
 `;
+
+export const LinkButton = styled.a``;

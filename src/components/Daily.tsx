@@ -1,4 +1,4 @@
-import { Projected } from "./styled/Projected";
+import { Projected } from "./Projected";
 
 const Daily = () => {
   return (
