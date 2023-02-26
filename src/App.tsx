@@ -13,6 +13,7 @@ import theme from "./theme/theme";
 
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Auth from "./Auth/Auth";
 
 function App() {
   return (
@@ -20,13 +21,62 @@ function App() {
       <GlobalStyles />
       <Router>
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/register" element={<Register />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/country" element={<Country />} />
-          <Route path="/reset-password" element={<Reset />} />
-          <Route path="/forgot-password" element={<Forgot />} />
-          <Route path="/change-password" element={<Change />} />
+          <Route
+            path="/"
+            element={
+              <Auth>
+                <Home />
+              </Auth>
+            }
+          />
+          <Route
+            path="/register"
+            element={
+              <Auth>
+                <Register />
+              </Auth>
+            }
+          />
+          <Route
+            path="/login"
+            element={
+              <Auth>
+                <Login />
+              </Auth>
+            }
+          />
+          <Route
+            path="/country"
+            element={
+              <Auth>
+                <Country />
+              </Auth>
+            }
+          />
+          <Route
+            path="/reset-password"
+            element={
+              <Auth>
+                <Reset />
+              </Auth>
+            }
+          />
+          <Route
+            path="/forgot-password"
+            element={
+              <Auth>
+                <Forgot />
+              </Auth>
+            }
+          />
+          <Route
+            path="/change-password"
+            element={
+              <Auth>
+                <Change />
+              </Auth>
+            }
+          />
           <Route path="/dashboard" element={<Dashboard />} />
         </Routes>
       </Router>

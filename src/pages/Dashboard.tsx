@@ -205,9 +205,9 @@ const Dashboard = () => {
         <Container width="1200px">
           <Hero weather={weather} isCelcius={isCelcius} />
 
-          <Hourly />
+          <Hourly weather={weather} isCelcius={isCelcius} />
 
-          <Daily />
+          <Daily weather={weather} isCelcius={isCelcius} />
         </Container>
       )}
 

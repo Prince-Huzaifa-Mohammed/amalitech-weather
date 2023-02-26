@@ -1,19 +1,30 @@
+import { WeatherData } from "../Interfaces/weather";
+import { fahrenheit } from "../utils/weather";
 import { Projected } from "./Projected";
 
-const Daily = () => {
+interface Props {
+  isCelcius: boolean;
+  weather: WeatherData | null;
+}
+
+const Daily: React.FC<Props> = ({ isCelcius, weather }) => {
   return (
     <Projected>
       <div>
         <h2>Daily Forecast</h2>
         <div>
-          <div>
-            <span>10:24</span>
-            <img
-              //  src={`http://openweathermap.org/img/wn/${hour.icon}@2x.png`}
-              alt=""
-            />
-            <p>10 &deg;</p>
-          </div>
+          {weather?.dailyData.map((day) => (
+            <div key={day.day}>
+              <span>{day.day}</span>
+              <img
+                src={`http://openweathermap.org/img/wn/${day.icon}@2x.png`}
+                alt=""
+              />
+              <p>
+                {weather && isCelcius ? day.temp : fahrenheit(day.temp)} &deg;
+              </p>
+            </div>
+          ))}
         </div>
       </div>
     </Projected>
