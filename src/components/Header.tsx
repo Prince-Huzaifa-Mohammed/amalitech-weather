@@ -1,5 +1,6 @@
 import { Dispatch, SetStateAction } from "react";
 import { FaAngleDown, FaSearch } from "react-icons/fa";
+import { UserRes } from "../Interfaces/weather";
 import { PrimaryButton } from "./styled/Buttons";
 import { Nav } from "./styled/Nav";
 import { StyledCelcius } from "./styled/StyledCelcius";
@@ -13,6 +14,7 @@ interface Props {
   getGeoWeather: (e: React.FormEvent<HTMLFormElement>) => void;
   inputData: string;
   setInputData: Dispatch<SetStateAction<string>>;
+  user: UserRes | null;
 }
 
 const Header: React.FC<Props> = ({
@@ -22,6 +24,7 @@ const Header: React.FC<Props> = ({
   getGeoWeather,
   inputData,
   setInputData,
+  user,
 }) => {
   return (
     <Nav>
@@ -68,8 +71,8 @@ const Header: React.FC<Props> = ({
 
         <div>
           <div>
-            <SVGIcon src="./assets/Germany.svg" width="5rem" />
-            <h2>K</h2>
+            <SVGIcon src={`./assets/${user?.country}.svg`} width="5rem" />
+            <h2>{user?.name?.slice(0, 1)}</h2>
             <span>
               <FaAngleDown onClick={toggleDropDown} />
             </span>

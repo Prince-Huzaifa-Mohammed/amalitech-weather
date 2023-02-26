@@ -188,6 +188,7 @@ const Dashboard = () => {
             getGeoWeather={getGeoWeather}
             inputData={inputData}
             setInputData={setInputData}
+            user={user}
           />
 
           {showDropDown && (
@@ -202,7 +203,7 @@ const Dashboard = () => {
 
       {weather && !error && !loggingOut && !loading && (
         <Container width="1200px">
-          <Hero />
+          <Hero weather={weather} isCelcius={isCelcius} />
 
           <Hourly />
 

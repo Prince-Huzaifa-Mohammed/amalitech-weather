@@ -1,6 +1,10 @@
 import styled from "styled-components";
 
-export const StyledHero = styled.section`
+type Props = {
+  image: string;
+};
+
+export const StyledHero = styled.section<Props>`
   margin-top: 8rem;
   color: ${({ theme }) => theme.colors.white};
 
@@ -32,7 +36,7 @@ export const StyledHero = styled.section`
           rgba(0, 0, 0, 0.5),
           rgba(0, 0, 0, 0.5)
         ),
-        url(./assets/clear.jpg);
+        url(./assets/${({ image }) => image});
       min-height: 40rem;
 
       border-radius: 0 0 1.5rem 1.5rem;

@@ -63,8 +63,8 @@ export const StyledHeader = styled.header`
     align-items: center;
 
     h2 {
-      width: 5rem;
-      height: 5rem;
+      width: 4.3rem;
+      height: 4.3rem;
       display: grid;
       place-items: center;
       border-radius: ${({ theme }) => theme.borderRadius.superRound};
