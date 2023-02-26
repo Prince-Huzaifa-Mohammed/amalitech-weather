@@ -35,6 +35,7 @@ import { UserRes } from "../Interfaces/weather";
 import Loader from "../components/Loader";
 import { RootState } from "../Redux/store";
 import { removeError } from "../Redux/features/errorSlice";
+import { InfoAlert } from "../components/styled/Alert";
 
 const Login = () => {
   const [visible, setVisible] = useState(false);
@@ -199,6 +200,8 @@ const Login = () => {
       ></ColoredContainer>
 
       <PositionedBox>
+        {error && <InfoAlert>{error}</InfoAlert>}
+
         <PrimaryHeading textAlign="center">
           Login to your Account
         </PrimaryHeading>

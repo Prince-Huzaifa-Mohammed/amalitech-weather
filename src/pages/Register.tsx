@@ -15,7 +15,7 @@ import { FaEye } from "react-icons/fa";
 import { Link, useNavigate } from "react-router-dom";
 import { PrimaryButton } from "../components/styled/Buttons";
 import { GridCenter } from "../components/styled/GridCenter";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 import {
   collection,
@@ -41,6 +41,7 @@ import { UserRes } from "../Interfaces/weather";
 import { addError } from "../Redux/features/errorSlice";
 import Loader from "../components/Loader";
 import { toast } from "react-toastify";
+import { removeError } from "../Redux/features/errorSlice";
 
 const Register = () => {
   const [visible, setVisible] = useState(false);
@@ -65,6 +66,11 @@ const Register = () => {
     if (visible) setVisible(false);
     else setVisible(true);
   };
+
+  useEffect(() => {
+    // Clear existing error from state
+    dispatch(removeError());
+  }, []);
 
   // Function to register a new user using email and password. Also saves user in database
   const registerUser = async (e: React.FormEvent<HTMLFormElement>) => {

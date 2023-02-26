@@ -20,10 +20,10 @@ export const Alert = styled.div<Props>`
   }
 `;
 
-export const ErrorAlert = styled(Alert)`
-  background: lightgoldenrodyellow;
-  color: red;
-  border: 1px solid red;
+export const InfoAlert = styled(Alert)`
+  background: #fad5a5;
+  color: #e49b0f;
+  border: 1px solid #e49b0f;
 `;
 
 export const SuccessAlert = styled(Alert)`

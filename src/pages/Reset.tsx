@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+import { useDispatch } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import Logo from "../components/Logo";
 import { PrimaryButton } from "../components/styled/Buttons";
@@ -12,9 +14,16 @@ import {
   Text,
 } from "../components/styled/Headings";
 import { Thumbnail } from "../components/styled/Thumbnail";
+import { removeError } from "../Redux/features/errorSlice";
 
 const Reset = () => {
   const navigate = useNavigate();
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    // Clear existing error from state
+    dispatch(removeError());
+  }, []);
 
   return (
     <>
