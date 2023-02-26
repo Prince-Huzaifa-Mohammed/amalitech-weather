@@ -130,7 +130,9 @@ const Change = () => {
             {verified ? (
               <>
                 {changing ? (
-                  <Loader />
+                  <PrimaryHeading textAlign="center" margin="3rem">
+                    Please wait ...
+                  </PrimaryHeading>
                 ) : (
                   <>
                     <PrimaryHeading textAlign="center">

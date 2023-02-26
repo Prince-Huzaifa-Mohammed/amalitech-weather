@@ -89,6 +89,15 @@ const GlobalStyles = createGlobalStyle<ThemeProps>`
       text-decoration: none;
       /* width: 60%; */
       display: inline-block;
+      transition: all 0.3s ease;
+
+      &:hover {
+        transform: scale(0.98);
+      }
+
+      &:active {
+        transform: scale(1);
+      }
 
       @media (max-width: ${({ theme }) => theme.breakPoints.mobile}) {
          width: 100%;
