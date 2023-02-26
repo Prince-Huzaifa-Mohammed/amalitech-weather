@@ -6,13 +6,11 @@ export const StyledDropDown = styled.div`
   width: 200px;
   box-shadow: ${({ theme }) => theme.boxShadows.boxShadowLight};
 
-  a {
-    text-decoration: none;
+  div {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
 
-    div {
-      display: flex;
-      gap: 2rem;
-      align-items: center;
-    }
+    cursor: pointer;
   }
 `;

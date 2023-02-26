@@ -1,16 +1,17 @@
 import { FaLock } from "react-icons/fa";
-import { Link } from "react-router-dom";
 import { StyledDropDown } from "./styled/StyledDropDown";
 
-const DropDown = () => {
+interface Props {
+  logoutUser: () => void;
+}
+
+const DropDown: React.FC<Props> = ({ logoutUser }) => {
   return (
     <StyledDropDown>
-      <Link to="/">
-        <div>
-          <FaLock />
-          Logout
-        </div>
-      </Link>
+      <div onClick={logoutUser}>
+        <FaLock />
+        Logout
+      </div>
     </StyledDropDown>
   );
 };

@@ -194,7 +194,7 @@ const Dashboard = () => {
           {showDropDown && (
             <ShowDropDown>
               <aside>
-                <DropDown />
+                <DropDown logoutUser={logoutUser} />
               </aside>
             </ShowDropDown>
           )}

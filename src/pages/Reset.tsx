@@ -46,6 +46,7 @@ const Reset = () => {
 
         <GridCenter>
           <PrimaryButton
+            margin="2rem"
             width="50%"
             onClick={() => navigate("/forgot-password")}
           >
