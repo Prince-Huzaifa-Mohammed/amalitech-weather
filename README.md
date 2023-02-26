@@ -1,46 +1,33 @@
-# Getting Started with Create React App
+# Amalitech Weather App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Weather information is very important. As a business, we plan some outdoor events and mostly, they get postponed due to poor weather conditions. This is having a negative effect on the image of the company. This app is an online platform that will allow the user of the system to get weather data for Germany Rwanda, and Ghana.
 
-## Available Scripts
+## About The Project
 
-In the project directory, you can run:
+This project is submited in partial fulfilment of the conditions necessary for the completion of this course.
 
-### `npm start`
+## Basic Functionality Of This App
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+This app simply provides users with a simple, minimal and clean interface to access weather information about various locations. This app provides the following functionality
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+1. A login page to allow interested persons to have access to this app
+2. A password reset page to allow users of this app to be able to have access to the application even if they loose their passwords.
+3. Allows users to query for weather information by either providing a country name or or a combination of a city and the country it can be found.
+4. Allows users to logout of the system at any point in time
+5. A hyper responsive app that provides a clean interface for various screen sizes.
+6. Provides users with an option to toggle between celcius and fahrenheit temperatures.
 
-### `npm test`
+## Technologies Used
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The following Libraries, frameworks and packages were used
 
-### `npm run build`
+1. React as the frontend library to build this app
+2. React router dom to provide navigation to various parts of this app
+3. "Fetch" to interact with the Open weather API
+4. React Icons
+5. Redux to manage the state of this application
+6. Styled components
+7. React Loader Spinner to manage the loading states when data is being fetched.
+8. React Loader Spinner to display various notifications to the user.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+## How to Use this App
