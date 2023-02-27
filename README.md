@@ -31,3 +31,5 @@ The following Libraries, frameworks and packages were used
 8. React Loader Spinner to display various notifications to the user.
 
 ## How to Use this App
+
+To access this app, please visit https://amalitech-weather-app.firebaseapp.com/
